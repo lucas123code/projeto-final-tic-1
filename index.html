@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- FONTES -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<title>Lucas | Portfólio</title>
+
+<style>
+
+/* BASE */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0b0f1a;
+    color: #e6e9f0;
+}
+
+/* TÍTULOS */
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* NAV */
+nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    color: white;
+    z-index: 1000;
+}
+
+nav button {
+    margin-left: 15px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+}
+
+nav button:hover {
+    color: #00d4ff;
+}
+
+/* HERO */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1507679799987-c73779587ccf');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+}
+
+.hero h1 {
+    font-size: 60px;
+    background: linear-gradient(90deg, #00d4ff, #007bff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #b0b8c5;
+}
+
+/* BOTÕES */
+button {
+    margin-top: 15px;
+    padding: 12px 20px;
+    background: linear-gradient(90deg, #007bff, #00d4ff);
+    border: none;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #00d4ff;
+}
+
+/* SECTIONS */
+section {
+    padding: 80px 40px;
+    text-align: center;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+/* CARDS */
+.card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    padding: 30px;
+    border: 1px solid rgba(255,255,255,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+/* FOOTER */
+footer {
+    background: #05070d;
+    padding: 20px;
+    text-align: center;
+}
+
+/* SCROLL SUAVE */
+html {
+    scroll-behavior: smooth;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- MENU -->
+<nav>
+    <h2>Lucas</h2>
+    <div>
+        <button onclick="go('sobre')">Sobre</button>
+        <button onclick="go('escola')">Escola</button>
+        <button onclick="go('formacao')">Formação</button>
+        <button onclick="go('contactos')">Contacto</button>
+    </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Futuro. Tecnologia. Impacto.</h1>
+    <p>Explorar, criar e inovar no mundo digital</p>
+    <button onclick="go('sobre')">Explorar</button>
+</div>
+
+<!-- SOBRE -->
+<section id="sobre">
+    <h2>Sobre Mim</h2>
+    <p>Sou o Lucas, estudante apaixonado por tecnologia, programação e inovação.</p>
+
+    <div class="grid">
+        <div class="card">
+            <h3>💻 Tecnologia</h3>
+            <p>Interesse em desenvolvimento e criação digital.</p>
+        </div>
+
+        <div class="card">
+            <h3>🎮 Gaming</h3>
+            <p>Experiência com jogos e computadores.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ESCOLA -->
+<section id="escola">
+    <h2>Escola</h2>
+    <p>Escola António Damásio</p>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Curso</h3>
+            <p>10º Ano - PSI2</p>
+        </div>
+    </div>
+</section>
+
+<!-- FORMAÇÃO -->
+<section id="formacao">
+    <h2>Formação</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>🤖 Robótica</h3>
+            <p>Formação pela SIC Esperança</p>
+        </div>
+
+        <div class="card">
+            <h3>📚 Ensino</h3>
+            <p>Experiência a ensinar alunos do 1º ciclo</p>
+        </div>
+    </div>
+</section>
+
+<!-- CONTACTOS -->
+<section id="contactos">
+    <h2>Contacto</h2>
+
+    <div class="grid">
+        <div class="card">
+            <h3>Email</h3>
+
+            <a href="mailto:157936@aeolivais.pt?subject=Contacto pelo site&body=Olá Lucas, vi o teu site e queria falar contigo!">
+                <button>Enviar Email</button>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 Lucas | Portfólio
+</footer>
+
+<script>
+function go(id){
+    document.getElementById(id).scrollIntoView();
+}
+</script>
+
+</body>
+</html>
